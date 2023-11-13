@@ -1,0 +1,11 @@
+.carousel .thumbs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel.carousel-slider .control-arrow{
+    display: none;
+}
+.carousel .carousel-status{
+    display: none;
+}

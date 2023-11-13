@@ -1,0 +1,10 @@
+.tab{
+    
+    border-color: transparent;
+}
+.react-tabs__tab--selected {
+    background: transparent;
+    border-bottom-color: #BB8506;
+    color: #BB8506;
+    border-radius: 5px 5px 0 0;
+}
