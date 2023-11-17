@@ -25,7 +25,7 @@ const PopularItems = () => {
                 popular.slice(0,6).map(item=> <MenuItems key={item._id} item={item} />)
             }   
             </div>
-            <Link to="/menu"><button className='btn bg-[transparent] hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-orange-500 hover:border-b-orange-500 text-orange-500 hover:text-orange-500 hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg mt-8 font-semibold'>View Full Menu</button></Link>
+            <Link to="/menu"><button className='btn bg-gray-200 hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-[#D1A054B2] hover:border-b-[#D1A054B2] text-[#D1A054B2] hover:text-[#D1A054B2] hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg mt-8 font-semibold'>View Full Menu</button></Link>
         </section>
     );
 };

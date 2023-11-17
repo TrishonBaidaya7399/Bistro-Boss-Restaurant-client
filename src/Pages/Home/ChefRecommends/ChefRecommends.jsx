@@ -14,7 +14,7 @@ const ChefRecommends = () => {
                         <div className="description px-4 pt-3">
                         <h1 className="text-[24px] font-bold">Caeser Salad</h1>
                         <p className="text-sm">Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
-                        <Link><button className='btn bg-[transparent] hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-orange-500  text-orange-500  hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg mt-2 font-semibold'>Read More</button></Link>
+                        <Link><button className='btn bg-gray-300 mt-2 hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-[#D1A054B2] hover:border-b-[#D1A054B2] text-[#D1A054B2] hover:text-[#D1A054B2] hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg font-semibold'>Read More</button></Link>
                         </div>
                     </div>
                     <div className="bg-gray-200 text-gray-700 h-[500px] text-center rounded-lg drop-shadow-[0_15px_15px_rgba(0,0,0,0.40)]">
@@ -22,7 +22,7 @@ const ChefRecommends = () => {
                         <div className="description px-4 pt-3">
                         <h1 className="text-[24px] font-bold">Delicious Desserts</h1>
                         <p className="text-sm">Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
-                        <Link><button className='btn bg-[transparent] hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-orange-500 text-orange-500 hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg mt-2 font-semibold'>Read More</button></Link>
+                        <Link><button className='btn bg-gray-300 mt-2 hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-[#D1A054B2] hover:border-b-[#D1A054B2] text-[#D1A054B2] hover:text-[#D1A054B2] hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg font-semibold'>Read More</button></Link>
                         </div>
                     </div>
                     <div className="bg-gray-200 text-gray-700 h-[500px] text-center rounded-lg drop-shadow-[0_15px_15px_rgba(0,0,0,0.40)]">
@@ -30,7 +30,7 @@ const ChefRecommends = () => {
                         <div className="description px-4 pt-3">
                         <h1 className="text-[24px] font-bold">Yammi Pizza</h1>
                         <p className="text-sm">Lettuce, Eggs, Parmesan Cheese, Chicken Breast Fillets.</p>
-                        <Link><button className='btn bg-[transparent] hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-orange-500 text-orange-500 hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg mt-2 font-semibold'>Read More</button></Link>
+                        <Link><button className='btn bg-gray-300 mt-2 hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-[#D1A054B2] hover:border-b-[#D1A054B2] text-[#D1A054B2] hover:text-[#D1A054B2] hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg font-semibold'>Read More</button></Link>
                         </div>
                     </div>
                 </div>

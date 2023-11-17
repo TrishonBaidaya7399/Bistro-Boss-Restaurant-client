@@ -5,3 +5,27 @@
 .rr--has-stroke .rr--hf-svg-on {
     stroke: none;
 }
+
+.swal2-container .swal2-popup img{
+    border-radius: 50%;
+    border: 5px solid #D1A054B2;
+    background: transparent;
+    padding: 5px;
+}
+.swal2-container .swal2-popup {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 0.5rem 0.5rem;
+    border: 3px solid #D1A054B2;
+    border-radius: 50px;
+}
+.swal2-container .swal2-popup button{
+    background: #D1A054B2;
+    border:2px solid #D1A054B2;
+    /* border:2px solid #d5850cb2; */
+}
+
+.table thead{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
