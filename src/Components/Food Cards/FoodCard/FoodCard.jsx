@@ -63,15 +63,15 @@ const FoodCard = ({ item }) => {
   return (
     <div className="bg-gray-200 pb-6 rounded-md drop-shadow-lg flex flex-col justify-between">
       <div>
-        <figure>
-          <img src={item?.image} className="w-full rounded-t-md" alt="" />
+        <figure className="h-[200px]">
+          <img src={item?.image} className="w-full rounded-t-md h-full" alt="" />
           <p className="absolute top-2 right-2 text-white bg-black rounded-md w-it px-4 py-1">
             ${item?.price}
           </p>
         </figure>
         <div className="my-6 mx-6 text-center">
           <h1 className="text-[24px] font-bold text-gray-700">{item?.name}</h1>
-          <p className="text-gray-500">{item?.recipe}</p>
+          <p className="text-gray-500 h-[80px] overflow-y-auto">{item?.recipe}</p>
         </div>
       </div>
       <div className="flex justify-center ">

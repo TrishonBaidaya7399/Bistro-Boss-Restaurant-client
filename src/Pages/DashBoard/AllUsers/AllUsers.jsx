@@ -89,7 +89,7 @@ const AllUsers = () => {
   return (
     <div className="bg-gray-100 lg:px-[100px] lg:py-4 min-h-screen">
       <Link to="/order/salad">
-        <Title heading="MANAGE ALL USERS" subHeading="How many??"></Title>
+        <Title heading="MANAGE ALL USERS" subHeading="How many?"></Title>
       </Link>
       <div className="bg-white rounded-lg p-12">
         <div className="">

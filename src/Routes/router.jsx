@@ -11,6 +11,9 @@ import DashBoard from "../Layout/DashBoard";
 import Cart from "../Pages/DashBoard/Cart/Cart";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../Pages/DashBoard/AllUsers/AllUsers";
+import AdminRoute from "./AdminRoute";
+import AddItems from "../Pages/DashBoard/AddItems/AddItems";
+import ManageItems from "../Pages/DashBoard/ManageItems/ManageItems";
 // import ErrorPage from "../ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
@@ -29,11 +32,11 @@ export const router = createBrowserRouter([
         },
         {
             path: '/order/:category',
-            element: <Order/>
+            element: <PrivateRoute><Order/></PrivateRoute>
         },
         {
             path: '/order',
-            element: <Order/>
+            element: <PrivateRoute><Order/></PrivateRoute>
         },
         {
             path: '/login',
@@ -51,11 +54,19 @@ export const router = createBrowserRouter([
       children: [
         {
           path: "cart",
-          element: <Cart/>
+          element: <PrivateRoute><Cart/></PrivateRoute>
         },
         {
           path: "allUsers",
-          element: <AllUsers/>
+          element: <PrivateRoute><AdminRoute><AllUsers/></AdminRoute></PrivateRoute>
+        },
+        {
+          path: "addItems",
+          element: <PrivateRoute><AdminRoute><AddItems/></AdminRoute></PrivateRoute>
+        },
+        {
+          path: "manageItems",
+          element: <PrivateRoute><AdminRoute><ManageItems/></AdminRoute></PrivateRoute>
         },
       ]
     },

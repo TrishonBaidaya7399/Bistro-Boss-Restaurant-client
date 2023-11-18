@@ -44,7 +44,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/adminHome"
@@ -57,7 +57,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/addItems"
@@ -70,7 +70,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/manageItems"
@@ -83,7 +83,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/manageBookings"
@@ -96,7 +96,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/allUsers"
@@ -109,7 +109,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/cart"
@@ -125,7 +125,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/userHome"
@@ -138,7 +138,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/reservation"
@@ -151,7 +151,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/payment"
@@ -164,7 +164,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/cart"
@@ -177,7 +177,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/review"
@@ -190,7 +190,7 @@ const DashBoard = () => {
                 <NavLink
                   className={({ isActive }) =>
                     isActive
-                      ? "text-[#FFFFFF] font-semibold"
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
                   to="/dashboard/bookings"
@@ -206,7 +206,7 @@ const DashBoard = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#FFFFFF] font-semibold"
+                  ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                   : "text-black font-semibold"
               }
               to="/"
@@ -219,7 +219,7 @@ const DashBoard = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#FFFFFF] font-semibold"
+                  ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                   : "text-black font-semibold"
               }
               to="/menu"
@@ -232,7 +232,7 @@ const DashBoard = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#FFFFFF] font-semibold"
+                  ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                   : "text-black font-semibold"
               }
               to="/order/salad"
@@ -245,7 +245,7 @@ const DashBoard = () => {
             <NavLink
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#FFFFFF] font-semibold"
+                  ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                   : "text-black font-semibold"
               }
               to="/contact"
