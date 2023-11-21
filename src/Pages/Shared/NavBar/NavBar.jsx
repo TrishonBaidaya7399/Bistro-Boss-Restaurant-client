@@ -55,16 +55,37 @@ const NavBar = () => {
       >
         <li>CONTACT US</li>
       </NavLink>
+      {user 
+      ? 
+      <>
+      {
+      isAdmin 
+      ?
       <NavLink
         className={({ isActive }) =>
           isActive
             ? "text-yellow-300 border-b-[3px] pb-1 border-[transparent] "
             : "text-white border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-yellow-300 duration-300"
         }
-        to="/dashboard"
+        to="/dashboard/adminHome"
       >
         <li>DASHBOARD</li>
       </NavLink>
+      :
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "text-yellow-300 border-b-[3px] pb-1 border-[transparent] "
+            : "text-white border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-yellow-300 duration-300"
+        }
+        to="/dashboard/userHome"
+      >
+        <li>DASHBOARD</li>
+      </NavLink> 
+      }
+      </>
+      : ""
+    }
       <NavLink
         className={({ isActive }) =>
           isActive
@@ -168,7 +189,7 @@ const NavBar = () => {
             <div className="dropdown dropdown-end">
               <div tabIndex={0} className="avatar">
                 <div className="w-3 md:w-10 rounded-full border-2 border-[#D1A054B2]">
-                  <img src={user?.photoURL ? user.photoURL : avatar} />
+                  <img src={user?.photoURL ? user.photoURL : avatar} referrerPolicy="no-referrer"/>
                 </div>
               </div>
               <ul
@@ -179,14 +200,15 @@ const NavBar = () => {
                   src={user?.photoURL}
                   className="w-[200px] md:w-[200px] h-[200px] mb-2 md:h-[200px] mx-auto border-[5px] border-[#D1A054B2] rounded-full"
                   alt=""
+                  referrerPolicy="no-referrer"
                 />
                 <h1 className="text-[20px] font-extrabold my-1">
                   {user?.displayName}
                 <p className="text-lg pt-2">{isAdmin ? "( Admin )" : ""}</p>
                 </h1>
-                {/* <p className="text-lg pb-4">
+                <p className="text-lg pb-4">
                   <span className="font-bold">Email:</span> {user?.email}
-                </p> */}
+                </p>
                 <Link onClick={handleLogOut} className="">
                   <button className="btn mt-2 bg-black bg-opacity-80 hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-[#D1A054B2] hover:border-b-[#D1A054B2] text-[#D1A054B2] hover:text-[#D1A054B2] hover:bg-black hover:bg-opacity-100 hover:drop-shadow-xl py-2 px-4 rounded-lg font-semibold">
                     {loading ? "Loading..." : "Logout"}

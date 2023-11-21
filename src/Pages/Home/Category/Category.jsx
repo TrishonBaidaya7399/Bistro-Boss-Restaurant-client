@@ -10,6 +10,7 @@ import slide3 from "../../../assets/home/slide3.jpg"
 import slide4 from "../../../assets/home/slide4.jpg"
 import slide5 from "../../../assets/home/slide5.jpg"
 import Title from '../../../Components/Title/Title';
+import { Link } from 'react-router-dom';
 
 const Category = () => {
     return (
@@ -23,30 +24,39 @@ const Category = () => {
         spaceBetween={30}
         pagination={{
           clickable: true,
-          autoplay: true,
         }}
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide autoplay="true" className='relative text-center'>
+        <SwiperSlide className='relative text-center'>
+            <Link to="/order/salad">
             <img src={slide1} className='w-full' alt="" />
             <h1 className='text-white absolute font-semibold text-4xl bottom-0 py-6 text-center bg-black bg-opacity-30 drop-shadow-xl w-full'>Salad</h1>
+            </Link>
         </SwiperSlide>
         <SwiperSlide className='relative text-center'>
+            <Link to="/order/pizza">
             <img src={slide2} className='w-full' alt="" />
             <h1 className='text-white absolute font-semibold text-4xl bottom-0 py-6 text-center bg-black bg-opacity-30 drop-shadow-xl w-full'>Pizza</h1>
+            </Link>
         </SwiperSlide>
         <SwiperSlide className='relative text-center'>
+            <Link to="/order/soup">
             <img src={slide3} className='w-full' alt="" />
             <h1 className='text-white absolute font-semibold text-4xl bottom-0 py-6 text-center bg-black bg-opacity-30 drop-shadow-xl w-full'>Soups</h1>
+            </Link>
         </SwiperSlide>
         <SwiperSlide className='relative text-center'>
+            <Link to="/order/dessert">
             <img src={slide4} className='w-full' alt="" />
             <h1 className='text-white absolute font-semibold text-4xl bottom-0 py-6 text-center bg-black bg-opacity-30 drop-shadow-xl w-full'>Desserts</h1>
+            </Link>
         </SwiperSlide>
         <SwiperSlide className='relative text-center'>
+            <Link to="/order/drinks">
             <img src={slide5} className='w-full' alt="" />
-            <h1 className='text-white absolute font-semibold text-4xl bottom-0 py-6 text-center bg-black bg-opacity-30 drop-shadow-xl w-full'>Salad</h1>
+            <h1 className='text-white absolute font-semibold text-4xl bottom-0 py-6 text-center bg-black bg-opacity-30 drop-shadow-xl w-full'>Drinks</h1>
+            </Link>
         </SwiperSlide>
       </Swiper>
             </div>

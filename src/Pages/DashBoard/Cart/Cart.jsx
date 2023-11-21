@@ -67,9 +67,11 @@ const Cart = () => {
             </h1>
           </div>
           <div>
-            <button className="bg-[#D1A054] hover: bg-[#D1A054] text-white font-semibold px-4 py-2 rounded-lg">
+            <Link to="/dashboard/payment">
+            <button disabled={!cart.length} className="bg-[#D1A054] hover: bg-[#D1A054] text-white font-semibold px-4 py-2 rounded-lg">
               Pay
             </button>
+            </Link>
           </div>
         </div>
         <div className="overflow-x-auto ">

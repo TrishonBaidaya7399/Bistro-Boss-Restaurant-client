@@ -5,14 +5,14 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import useCart from "../../../Hooks/useCart";
-// import axios from "axios";
 
 const FoodCard = ({ item }) => {
+  // console.log(item);
   const axiosSecure = useAxiosSecure();
   const navigate = useNavigate();
   const location = useLocation();
   const { user } = useContext(AuthContext);
-  const [ , refetch] = useCart();
+  const [refetch] = useCart();
   const [loading, setLoading] = useState(false);
 
 
@@ -71,7 +71,7 @@ const FoodCard = ({ item }) => {
         </figure>
         <div className="my-6 mx-6 text-center">
           <h1 className="text-[24px] font-bold text-gray-700">{item?.name}</h1>
-          <p className="text-gray-500 h-[80px] overflow-y-auto">{item?.recipe}</p>
+          <p className="text-gray-500 h-[70px]">{item?.recipe && item.recipe.length>70 ? `${item.recipe.substring(0,70)}...` : item.recipe  }</p>
         </div>
       </div>
       <div className="flex justify-center ">
@@ -86,8 +86,17 @@ const FoodCard = ({ item }) => {
   );
 };
 
+
 FoodCard.propTypes = {
-  item: PropTypes.node,
+  item: PropTypes.shape({
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    recipe: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    // Add other properties as needed
+  }).isRequired,
 };
 
 export default FoodCard;

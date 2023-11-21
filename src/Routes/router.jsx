@@ -1,6 +1,4 @@
-import {
-    createBrowserRouter,
-  } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Menu from "../Pages/Menu/Menu/Menu";
@@ -14,60 +12,126 @@ import AllUsers from "../Pages/DashBoard/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
 import AddItems from "../Pages/DashBoard/AddItems/AddItems";
 import ManageItems from "../Pages/DashBoard/ManageItems/ManageItems";
+import UpdateItem from "../Pages/DashBoard/UpdateItem/UpdateItem";
+import Payment from "../Pages/DashBoard/Payment/Payment";
+import PaymentHistory from "../Pages/DashBoard/PaymentHistory/PaymentHistory";
+import AllPaymentHistory from "../Pages/DashBoard/AllPayments/AllPaymentHistory";
+import UserHome from "../Pages/DashBoard/UserHome/UserHome";
+import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome";
 // import ErrorPage from "../ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main/>,
+  {
+    path: "/",
+    element: <Main />,
     //   errorElement: <ErrorPage/>,
-      children: [
-        {
-            path: '/',
-            element: <Home/>
-        },
-        {
-            path: '/menu',
-            element: <Menu/>
-        },
-        {
-            path: '/order/:category',
-            element: <PrivateRoute><Order/></PrivateRoute>
-        },
-        {
-            path: '/order',
-            element: <PrivateRoute><Order/></PrivateRoute>
-        },
-        {
-            path: '/login',
-            element: <Login/>
-        },
-        {
-            path: '/register',
-            element: <SignUp/>
-        },
-      ]
-    },
-    {
-      path: "dashboard",
-      element: <PrivateRoute><DashBoard></DashBoard></PrivateRoute>,
-      children: [
-        {
-          path: "cart",
-          element: <PrivateRoute><Cart/></PrivateRoute>
-        },
-        {
-          path: "allUsers",
-          element: <PrivateRoute><AdminRoute><AllUsers/></AdminRoute></PrivateRoute>
-        },
-        {
-          path: "addItems",
-          element: <PrivateRoute><AdminRoute><AddItems/></AdminRoute></PrivateRoute>
-        },
-        {
-          path: "manageItems",
-          element: <PrivateRoute><AdminRoute><ManageItems/></AdminRoute></PrivateRoute>
-        },
-      ]
-    },
-  ]);
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/menu",
+        element: <Menu />,
+      },
+      {
+        path: "/order/:category",
+        element: (
+          <PrivateRoute>
+            <Order />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/order",
+        element: (
+          <PrivateRoute>
+            <Order />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <SignUp />,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: (
+      <PrivateRoute>
+        <DashBoard></DashBoard>
+      </PrivateRoute>
+    ),
+    children: [
+      // user only
+      {
+        path: "userHome",
+        element: <UserHome />,
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
+      {
+        path: "payment",
+        element: <Payment />,
+      },
+      {
+        path: "paymentHistory",
+        element: <PaymentHistory />,
+      },
+      // admin only
+      {
+        path:"adminHome",
+        element: <AdminRoute><AdminHome/></AdminRoute>
+      },
+      {
+        path: "allUsers",
+        element: (
+          <AdminRoute>
+            <AllUsers />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "addItems",
+        element: (
+          <AdminRoute>
+            <AddItems />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "allPaymentsHistory",
+        element: (
+          <AdminRoute>
+            <AllPaymentHistory />
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "updateItem/:id",
+        element: (
+          <AdminRoute>
+            <UpdateItem />
+          </AdminRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/menu/${params.id}`),
+      },
+      {
+        path: "manageItems",
+        element: (
+          <AdminRoute>
+            <ManageItems />
+          </AdminRoute>
+        ),
+      },
+    ],
+  },
+]);

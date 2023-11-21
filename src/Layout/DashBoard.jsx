@@ -14,20 +14,9 @@ import { GiStarsStack, GiShoppingBag, GiForkKnifeSpoon } from "react-icons/gi";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
-import { useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../Hooks/useAxiosSecure";
 
 const DashBoard = () => {
-  const axiosSecure = useAxiosSecure();
   const [cart, refetch] = useCart();
-  const { data: users = [] } = useQuery({
-    queryKey: ["users"],
-    queryFn: async () => {
-      const res = await axiosSecure.get("/users");
-      return res.data;
-    },
-  });
-  //get admin from database
   const [isAdmin] = useAdmin();
   refetch();
   return (
@@ -102,7 +91,20 @@ const DashBoard = () => {
                   to="/dashboard/allUsers"
                 >
                   <FaUsers className="text-[20px] " />
-                  All Users ({users.length})
+                  All Users
+                </NavLink>
+              </li>
+               <li className="">
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
+                      : "text-black font-semibold"
+                  }
+                  to="/dashboard/allPaymentsHistory"
+                >
+                  <MdPayments className="text-[20px] " />
+                  All payment history
                 </NavLink>
               </li>
               <li className="">
@@ -141,7 +143,7 @@ const DashBoard = () => {
                       ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
-                  to="/dashboard/reservation"
+                  to="/dashboard/payment"
                 >
                   <FaCalendarAlt className="text-[20px] " />
                   Reservation
@@ -154,7 +156,7 @@ const DashBoard = () => {
                       ? "text-[#FFFFFF] font-semibold bg-[#D1A054]"
                       : "text-black font-semibold"
                   }
-                  to="/dashboard/payment"
+                  to="/dashboard/paymentHistory"
                 >
                   <MdPayments className="text-[20px] " />
                   payment history

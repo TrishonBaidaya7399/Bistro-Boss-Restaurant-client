@@ -30,4 +30,30 @@
     border-top-right-radius: 20px;
 }
 
-
+.overflow-x-auto::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 6px;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background-color: #794800; /* Set the color of the scrollbar thumb */
+    border-radius: 6px; /* Optional: Round the corners of the thumb */
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar-track {
+    background-color: #D1A054; /* Set the color of the scrollbar track */
+  }
+ .overflow-y-auto::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 50%;
+  }
+  
+  .overflow-y-auto::-webkit-scrollbar-thumb {
+    background-color: #794800; /* Set the color of the scrollbar thumb */
+    border-radius: 6px; /* Optional: Round the corners of the thumb */
+  }
+  
+  .overflow-y-auto::-webkit-scrollbar-track {
+    background-color: #D1A054; /* Set the color of the scrollbar track */
+  } 
+   
