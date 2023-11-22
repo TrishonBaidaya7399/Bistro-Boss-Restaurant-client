@@ -49,6 +49,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+
         signInUser(email, password)
         .then(result=>{
           console.log("Logged in successfully!", result.user);
@@ -62,13 +63,14 @@ const Login = () => {
             confirmButtonText: 'Ok!',
           })
           setLoading(false)
+          navigate(from , {replace: true});
         })
         .catch(error=>{
           console.error(error.message);
           setLoading(false);
           setErrors(error.message)
         })
-        navigate(from , {replace: true});
+       
     }
 
     const handleValidateCaptcha = (e) =>{
