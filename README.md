@@ -50,17 +50,17 @@
 - Items section for individual types of items
 - For each section Have a button that navigates to our shop page for this selected category
 
-  ### Our Shop:
-  - Has a tab section for individual items category
-  - for each tab, show all items relevant to this category
-  - items are shown as cards that have an Add to Cart button
-  - Clicking on the Add to Cart button, items added to the cart page
+### Our Shop:
+- Has a tab section for individual items category
+- for each tab, show all items relevant to this category
+- items are shown as cards that have an Add to Cart button
+- Clicking on the Add to Cart button, items added to the cart page
  
-  ### Cart page:
-  - Contain all the added products
-  - the cart button shows the number of products contained in it
-  - all orders are shown in a table and have a pay button, and delete button
-  - clicking on the pay button, redirects the user to the payment page to pay by card
+### Cart page:
+- Contain all the added products
+- the cart button shows the number of products contained in it
+- all orders are shown in a table and have a pay button, and delete button
+- clicking on the pay button, redirects the user to the payment page to pay by card
 
 ### Responsive
 - Make the entire website and dashboard responsive.
