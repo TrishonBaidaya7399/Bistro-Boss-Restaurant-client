@@ -24,19 +24,19 @@
 ### Dashboard (private🔒)
 - All layouts with a sidebar, fully responsive.
 - Profile Page (/dashboard/profile): Display user info
-#### User Dashboard Home Page (/dashboard): Display welcome message.
-Payment History Page: Display all payment history
-Reservation page: Booking page for table
-My Cart: show all cart-added items
-Create Donation Request Page (/dashboard/create-donation-request): Form with various input fields to create a donation request.
+#### User Dashboard 
+- Home Page (/dashboard): Display welcome message.
+- Payment History Page: Display all payment history.
+- Reservation page: Booking page for table.
+- My Cart: show all cart-added items
 
 #### Admin Dashboard: 
-Display statistics (total users, revenue, orders, total products). 
-Manage Items, 
-Add items, 
-All users, 
-All Payment history, 
-My cart.
+- Display statistics (total users, revenue, orders, total products).
+- Manage Items,
+- Add items,
+- All users,
+- All Payment history,
+- My cart.
 
 ### Home Page (public): 
 - Navbar with links for Dashboard, Contact Us, Our Menu, Our Shop, Login, Cart
