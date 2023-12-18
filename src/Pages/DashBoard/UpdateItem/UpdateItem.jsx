@@ -31,17 +31,6 @@ const UpdateItem = () => {
 
   const onSubmit = async (data) => {
     console.log(data);
-    //img upload to imgbb and get an url
-    //don't use axiosSecure, as we are not going to verify the img before uploading on imgbb
-    // const imageFile = { image: data.image[0] };
-    // const res = await axiosPublic.post(img_hosting_api, imageFile, {
-    //   headers: {
-    //     "content-type": "multipart/form-data",
-    //   },
-    // });
-    // console.log(res.data);
-   
-      //now send the menu item data with the image url
       setLoading(true);
       const menuItem = {
         name: data.name,

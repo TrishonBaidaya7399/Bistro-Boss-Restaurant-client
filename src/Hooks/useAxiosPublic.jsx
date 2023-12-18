@@ -2,7 +2,7 @@ import axios from "axios";
 
 // import PropTypes from 'prop-types';
 const axiosPublic = axios.create({
-    baseURL: `https://bistro-boss-restaurant-server-topaz.vercel.app`
+    baseURL: `http://localhost:5000`
 })
 const useAxiosPublic = () => {
     return axiosPublic;
