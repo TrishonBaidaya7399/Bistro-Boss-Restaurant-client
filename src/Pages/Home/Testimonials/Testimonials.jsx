@@ -13,16 +13,16 @@ import { Navigation } from 'swiper/modules';
 const Testimonials = () => {
     const [reviews, setReviews] =  useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/reviews')
+        fetch('https://bistro-boss-restaurant-server-topaz.vercel.app/reviews')
         .then(res=> res.json())
         .then(data => {
             setReviews(data);
         })
     },[])
     return (
-        <section className="my-[80px]">
+        <section className="my-6 lg:my-[80px]">
            <Title heading={"TESTIMONIALS"}  subHeading={"What Our Clients Say"}/>
-            <div className="lg:mx-[200px]">
+            <div className="mx-2 lg:mx-[200px]">
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper bg-gray-200 rounded-lg">
                 {
                 reviews.map(review => 
@@ -30,7 +30,7 @@ const Testimonials = () => {
                     <div className="text-center py-8">
                         <Rating style={{ maxWidth: 180 }} value={review.rating} readOnly className="mx-auto pb-2"/>
                         <BiSolidQuoteLeft className="text-7xl text-[#CD9003] mx-auto pb-2"/>
-                        <p className="px-[100px] text-gray-600">{review.details}</p>
+                        <p className="px-6 lg:px-[100px] text-gray-600">{review.details}</p>
                         <h1 className="text-2xl text-[#CD9003] font-semibold p-2 uppercase">{review.name}</h1>
                     </div>
                 </SwiperSlide>)

@@ -10,27 +10,30 @@ import "./Banner.css"
 
 const Banner = () => {
     return (
+        <div className="max-h-full">
+
         <Carousel autoPlay="true" infiniteLoop="true" className='top-0' showStatus="false">
-        <div>
+        <div className="max-h-[100vh]">
             <img src="https://i.ibb.co/qCMMpCg/01.jpg" />
         </div>
-        <div>
+        <div className="max-h-[100vh]">
             <img src="https://i.ibb.co/98y7KKV/02.jpg" />
         </div>
-        <div>
+        <div className="max-h-[100vh]">
             <img src="https://i.ibb.co/p0M2wvz/03.png" />
         </div>
-        <div>
+        <div className="max-h-[100vh]">
             <img src="https://i.ibb.co/3WmGkpG/04.jpg" />
         </div>
-        <div>
+        <div className="max-h-[100vh]">
             <img src="https://i.ibb.co/7t1PptH/05.png" />
         </div>
-        <div>
+        <div className="max-h-[100vh]">
             <img src="https://i.ibb.co/jbvq92M/06.png" />
         </div>
         
     </Carousel>
+        </div>
     );
 };
 

@@ -7,18 +7,8 @@ import useMenu from '../../../Hooks/useMenu';
 const PopularItems = () => {
     const [menu] = useMenu();
     const popular = menu.filter( m=> m.category === "popular") 
-    // const [menu, setMenu] =  useState([])
-    // useEffect(()=>{
-    //     fetch("menu.json")
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         // const popular = data.filter(item => item.category === "popular")
-    //         const popular = data
-    //         setMenu(popular)
-    //     })
-    // },[])
     return (
-        <section className='pt-12 lg:mx-[200px] flex flex-col items-center'>
+        <section className='lg:pt-12 mx-2 lg:mx-[200px] flex flex-col items-center'>
             <Title heading={"FROM OUR MENU"} subHeading={'Check it out'}/>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {

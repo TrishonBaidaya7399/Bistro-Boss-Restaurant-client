@@ -55,7 +55,7 @@ const AddItems = () => {
   return (
     <div className="bg-white lg:px-[100px] lg:py-4 min-h-screen">
       <Title heading="ADD AN ITEM" subHeading="What's new?"></Title>
-      <div className="bg-gray-100 rounded-lg p-12">
+      <div className="bg-gray-100 rounded-lg p-2 md:p-6 lg:p-12">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="card-body text-gray-700"

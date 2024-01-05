@@ -19,13 +19,14 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const { logOut, user } = useContext(AuthContext);
-  const [cart] = useCart();
+  const [cart, refetch] = useCart();
   const [cartLength, setCartLength] = useState(cart.length)
   const [isAdmin] = useAdmin();
   useEffect(()=>{
     const cartItems = cart.length;
-    setCartLength(cartItems)
-  },[cart])
+    setCartLength(cartItems);
+    refetch();
+  },[cart, refetch])
   useEffect(() => {
     const body = document.querySelector("body");
     body.style.backgroundColor = darkMode ? "#18222f" : "white";
@@ -112,7 +113,7 @@ const NavBar = () => {
             ? "block md:hidden  text-yellow-300 border-b-[3px] pb-1 border-[transparent] "
             : "block md:hidden  text-white border-b-[3px] pb-1 border-[transparent] hover:border-b-[3px] hover:border-yellow-300 duration-300"
         }
-        to="/cart"
+        to="/dashboard/cart"
       >
         <li>My Cart</li>
       </NavLink>
@@ -158,12 +159,12 @@ const NavBar = () => {
         </Link>
       </div>
 
-      <div className="flex gap-8">
+      <div className="flex gap-2 md:gap-8">
         <ul className="hidden lg:block menu menu-horizontal px-1">
           {navItems}
         </ul>
 
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate hidden lg::block">
           <input type="checkbox" />
           {/* sun icon */}
           <BsSunFill
@@ -178,7 +179,7 @@ const NavBar = () => {
         </label>
         {user ? (
           <>
-            <div>
+            <div className="hidden lg:block">
               <NavLink to="/dashboard/cart">
                 <button className="btn bg-[transparent] hover:bg-[transparent] border-none relative">
                   <TiShoppingCart className="bg-green-500 p-1 rounded-full border-[3px] border-yellow-300 text-5xl text-white" />
@@ -188,13 +189,13 @@ const NavBar = () => {
             </div>
             <div className="dropdown dropdown-end">
               <div tabIndex={0} className="avatar">
-                <div className="w-3 md:w-10 rounded-full border-2 border-[#D1A054B2]">
+                <div className="w-8 md:w-10 rounded-full border-2 border-[#D1A054B2]">
                   <img src={user?.photoURL ? user.photoURL : avatar} referrerPolicy="no-referrer"/>
                 </div>
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content mt-5 text-gray-200 border-[5px] border-[#D1A054B2] bg-opacity-70 drop-shadow-xl z-[1] text-center menu p-4 shadow bg-[#18222f] rounded-box w-[350px]"
+                className="dropdown-content mt-5 text-gray-200 border-[5px] border-[#D1A054B2] bg-opacity-70 drop-shadow-xl z-[1] text-center menu p-4 shadow bg-[#18222f] rounded-box w-[280px] md:w-[350px] mx-auto"
               >
                 <img
                   src={user?.photoURL}
@@ -227,15 +228,16 @@ const NavBar = () => {
           </>
         )}
         <div className="dropdown dropdown-end">
+       
           <label className="swap swap-rotate lg:hidden">
             <input type="checkbox" />
             <GiHamburgerMenu
               onClick={() => setOpen(!open)}
-              className="swap-off text-[25px] md:text-4xl text-[#D1A054B2] bg-[transparent] "
+              className="swap-off text-[25px] md:text-4xl text-yellow-400 bg-[transparent] "
             />
             <RxCross2
               onClick={() => setOpen(!open)}
-              className="swap-on text-[25px] md:text-4xl text-[#D1A054B2] bg-[transparent] "
+              className="swap-on text-[25px] md:text-4xl text-yellow-400 bg-[transparent] "
             />
           </label>
 
@@ -245,6 +247,21 @@ const NavBar = () => {
             } menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow text-gray-200 border-2 border-gray-200 bg-opacity-70 drop-shadow-xl bg-black `}
           >
             {navItems}
+          <div className="flex gap-2">
+          <label className="swap swap-rotate ">
+          <input type="checkbox" />
+          {/* sun icon */}
+          <BsSunFill
+            onClick={() => setDarkMode(true)}
+            className="swap-on fill-current text-white text-2xl md:text-3xl"
+          />
+          {/* moon icon */}
+          <BsFillMoonStarsFill
+            onClick={() => setDarkMode(false)}
+            className=" swap-off fill-current text-yellow-400 text-2xl md:text-3xl"
+          />
+        </label>
+          </div>
           </ul>
         </div>
       </div>

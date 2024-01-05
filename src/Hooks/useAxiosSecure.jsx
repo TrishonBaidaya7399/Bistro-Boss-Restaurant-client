@@ -5,7 +5,7 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 // import PropTypes from 'prop-types';
 const axiosSecure = axios.create({
-  baseURL: `http://localhost:5000`,
+  baseURL: `https://bistro-boss-restaurant-server-topaz.vercel.app`,
 });
 const useAxiosSecure = () => {
   const navigate = useNavigate();

@@ -35,14 +35,14 @@ const Order = () => {
             <Cover heading={"OUR SHOP"} subHeading={"Would you like to try a dish?"} image={orderBg}/>
             {/* <Title heading={"TODAY'S OFFER"} subHeading={"Don't miss"}/>
             <MenuCategory category={"offered"}/> */}
-            <div className="mt-[100px] mb-[60px]">
+            <div className="mt-6 lg:mt-[100px] mb-[60px] mx-2">
             <Tabs defaultIndex={tabs} onSelect={(index) => setTabs(index)}>
-                <TabList className="tabs flex gap-12 justify-center">
-                    <Tab className="tab tab-bordered font-semibold text-lg text-black">SALAD</Tab>
-                    <Tab className="tab tab-bordered font-semibold text-lg text-black">PIZZA</Tab>
-                    <Tab className="tab tab-bordered font-semibold text-lg text-black">SOUP</Tab>
-                    <Tab className="tab tab-bordered font-semibold text-lg text-black">DESSERT</Tab>
-                    <Tab className="tab tab-bordered font-semibold text-lg text-black">DRINK</Tab>
+                <TabList className="tabs flex lg:gap-12 justify-center">
+                    <Tab className="tab tab-bordered font-semibold text-sm md:text-lg text-black">SALAD</Tab>
+                    <Tab className="tab tab-bordered font-semibold text-sm md:text-lg text-black">PIZZA</Tab>
+                    <Tab className="tab tab-bordered font-semibold text-sm md:text-lg text-black">SOUP</Tab>
+                    <Tab className="tab tab-bordered font-semibold text-sm md:text-lg text-black">DESSERT</Tab>
+                    <Tab className="tab tab-bordered font-semibold text-sm md:text-lg text-black">DRINK</Tab>
                 </TabList>
 
                 <TabPanel>

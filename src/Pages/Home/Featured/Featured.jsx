@@ -5,14 +5,14 @@ import Title from "../../../Components/Title/Title";
 import "./Featured.css"
 const Featured = () => {
     return (
-        <div style={{backgroundImage: `url(${FeaturedImg})`}} className="featured-item bg-fixed text-white  my-[80px]">
-           <div className="bg-black bg-opacity-60 w-full h-full pt-[50px]">
+        <div style={{backgroundImage: `url(${FeaturedImg})`}} className="featured-item bg-fixed text-white my-6 lg:my-[80px]">
+           <div className="bg-black bg-opacity-60 w-full h-full pt-6 lg:pt-[50px]">
            <Title heading={'FROM OUR MENU'} subHeading={'Check it out'}/>
-            <div className="flex gap-12 items-center w-full h-full px-[150px] pt-[30px] pb-[100px]">
-            <div className="w-1/2">
+            <div className="flex flex-col lg:flex-row gap-12 items-center w-full h-full px-2 md:px-12 lg:px-[150px]  lg:pt-[30px] pb-12 lg:pb-[100px]">
+            <div className="lg:w-1/2">
                 <img className="" src={FeaturedImg} alt="" />
             </div>
-            <div className="w-1/2">
+            <div className="lg:w-1/2">
                 <p className="text-xl font-bold">March 20, 2023</p>
                 <p className="text-xl font-bold mb-1">WHERE CAN I GET SOME?</p>
                 <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error voluptate facere, deserunt dolores maiores quod nobis quas quasi. Eaque repellat recusandae ad laudantium tempore consequatur consequuntur omnis ullam maxime tenetur.</p>

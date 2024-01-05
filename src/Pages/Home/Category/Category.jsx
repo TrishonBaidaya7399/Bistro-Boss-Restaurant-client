@@ -14,8 +14,8 @@ import { Link } from 'react-router-dom';
 
 const Category = () => {
     return (
-        <div className='my-[80px]'>
-            <div className='lg:mx-[200px]'>
+        <div className=' mb-6 md:mb-none md:my-[80px]'>
+            <div className='mx-2 lg:mx-[200px]'>
             <Title heading={"ORDER ONLINE"} subHeading={"From 11:00am to 10:00pm"}/>    
             <Swiper
         slidesPerView={4}
@@ -27,6 +27,17 @@ const Category = () => {
         }}
         modules={[Pagination]}
         className="mySwiper"
+        breakpoints={{
+            320: {
+              slidesPerView: 2, // Show only one slide for small screens (320px and up)
+            },
+            768: {
+              slidesPerView: 3, // Show 2 slides for medium screens (768px and up)
+            },
+            1200: {
+              slidesPerView: 4, // Show 4 slides for large screens (1200px and up)
+            },
+          }}
       >
         <SwiperSlide className='relative text-center'>
             <Link to="/order/salad">

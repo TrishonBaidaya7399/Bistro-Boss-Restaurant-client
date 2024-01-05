@@ -16,7 +16,7 @@ const FoodCard = ({ item }) => {
   const [loading, setLoading] = useState(false);
 
 
-  const handleAddToCart = () => {
+  const handleAddToCart = async() => {
     setLoading(true);
     if (user && user.email) {
       const cartItem = {
@@ -59,6 +59,7 @@ const FoodCard = ({ item }) => {
         }
       });
     }
+    await refetch();
   };
   return (
     <div className="bg-gray-200 pb-6 rounded-md drop-shadow-lg flex flex-col justify-between">

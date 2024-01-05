@@ -9,12 +9,12 @@ return (
         bgImageAlt="the dog"
         strength={-200}
     >
-    <div className="hero h-[80vh] px-[300px] py-[150px]">
-        <div className="hero-overlay bg-black bg-opacity-60 p-12"></div>
+    <div className="hero lg:h-[80vh] mt-[60px] lg:mt-12 lg:mt-0 p-4 md:p-12 lg:px-[300px] lg:py-[150px]">
+        <div className="hero-overlay bg-black bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
             <div className="max-w-md">
-                <h1 className="mb-5 text-6xl font-extrabold">{heading}</h1>
-                <p className="mb-5 text-xl">{subHeading}</p>
+                <h1 className="mb-5 pt-12 md:pt-none text-4xl md:text-6xl font-extrabold">{heading}</h1>
+                <p className="mb-5 text-sm md:text-xl">{subHeading}</p>
             </div>
         </div>
     </div>

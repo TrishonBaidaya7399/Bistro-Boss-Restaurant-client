@@ -5,7 +5,7 @@ import img2 from "../../../assets/home/slide2.jpg"
 import img3 from "../../../assets/home/slide3.jpg"
 const ChefRecommends = () => {
     return (
-        <div className="lg:mx-[200px] my-[80px]">
+        <div className="mx-2 lg:mx-[200px] lg:my-[80px]">
             <Title heading={"CHEF RECOMMENDS"} subHeading={"Should Try"}/>
             <div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

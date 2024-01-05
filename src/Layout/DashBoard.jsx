@@ -10,23 +10,38 @@ import {
   FaList,
 } from "react-icons/fa";
 import { MdPayments, MdEmail } from "react-icons/md";
-import { GiStarsStack, GiShoppingBag, GiForkKnifeSpoon } from "react-icons/gi";
+import { GiStarsStack, GiShoppingBag, GiForkKnifeSpoon, GiHamburgerMenu } from "react-icons/gi";
 import { NavLink, Outlet } from "react-router-dom";
 import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
+import { RxCross2 } from "react-icons/rx";
+import { useState } from "react";
 
 const DashBoard = () => {
   const [cart, refetch] = useCart();
+  const [open, setOpen] = useState(true);
   const [isAdmin] = useAdmin();
+  console.log("IsAdmin: ",isAdmin);
   refetch();
   return (
-    <div className="flex">
-      <div className="w-64 min-h-screen bg-[#D1A054] py-8">
-        <div className="title flex flex-col pl-7">
+    <div className="flex overflow-y-hidden bg-gray-100">
+        <label className={`swap swap-rotate pt-2 pl-4 absolute `}>
+            <input type="checkbox" />
+            <GiHamburgerMenu
+              onClick={() => setOpen(!open)}
+              className="swap-off text-[25px] md:text-4xl text-black bg-[transparent] "
+            />
+            <RxCross2
+              onClick={() => setOpen(!open)}
+              className="swap-on text-[25px] md:text-4xl text-black bg-[transparent] "
+            />
+          </label>
+      <div className="min-h-screen bg-[#D1A054] py-8">
+        <div className={`title flex flex-col pt-6 pl-7 ${open ? "w-0 hidden" : "w-64"}`}>
           <p className="text-md md:text-2xl font-extrabold">BISTRO BOSS</p>
           <p className="text-[12px] tracking-[7px] font-bold">RESTAURANT</p>
         </div>
-        <ul className="menu">
+        <ul className={`menu ${open ? "w-0 hidden" : "w-64"}`}>
           {isAdmin ? (
             <>
               <li className="">

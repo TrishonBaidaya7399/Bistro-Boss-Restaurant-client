@@ -16,7 +16,7 @@ const Home = () => {
             <Helmet>
             <title>{`BISTRO BOSS | Home`}</title>
             </Helmet>
-            <Banner/>
+            <Banner className=""/>
             <Category/>
             <ChefService/>
             <PopularItems/>
