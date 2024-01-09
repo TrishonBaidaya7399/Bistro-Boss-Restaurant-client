@@ -18,13 +18,13 @@ import PaymentHistory from "../Pages/DashBoard/PaymentHistory/PaymentHistory";
 import AllPaymentHistory from "../Pages/DashBoard/AllPayments/AllPaymentHistory";
 import UserHome from "../Pages/DashBoard/UserHome/UserHome";
 import AdminHome from "../Pages/DashBoard/AdminHome/AdminHome";
-// import ErrorPage from "../ErrorPage/ErrorPage";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    //   errorElement: <ErrorPage/>,
+      errorElement: <ErrorPage/>,
     children: [
       {
         path: "/",
