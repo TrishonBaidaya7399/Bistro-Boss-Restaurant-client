@@ -46,12 +46,12 @@ const ManageItems = () => {
   };
 
   return (
-    <div className="bg-gray-100 lg:px-[100px] lg:py-4 min-h-screen">
+    <div className="bg-gray-100 lg:px-[100px] lg:py-4 min-h-screen max-w-[100vw]">
       <Title heading="MANAGE ALL ITEMS" subHeading="Hurry Up!"></Title>
-      <div className="bg-white rounded-lg p-12">
+      <div className="bg-white rounded-lg p-2 md:p-12 mb-12">
         <div className="">
           <div>
-            <h1 className="text-2xl font-bold uppercase mb-3">
+            <h1 className="text-lg md:text-2xl font-bold uppercase mb-3">
               Total items: {menu.length}
             </h1>
           </div>

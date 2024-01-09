@@ -78,11 +78,11 @@ const pieChartData = chartData.map(data => {
 
 
   return (
-    <div className="lg:p-10 bg-gray-100 h-screen px-[50px]">
+    <div className="lg:p-10 bg-gray-100 h-screen px-2 mt-12  lg:px-[50px] max-w-[100vw] overflow-y-auto overflow-x-hidden">
       <h1 className="text-3xl font-bold">
         Hi! Welcome Back <span>{user?.displayName}</span>
       </h1>
-      <div className="grid grid-cols-4 gap-4 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
         <div className="rounded-lg bg-gradient-to-r from-[#BB34F5] to-[#FCDBFF] flex items-center justify-center px-8 py-4 gap-2 border-r-[#FCDBFF]">
           <FaWallet className="text-4xl text-white" />
           <div className="flex flex-col">
@@ -114,8 +114,8 @@ const pieChartData = chartData.map(data => {
           </div>
         </div>
       </div>
-      <div className="flex gap-12 mt-12 rounded-lg bg-white">
-        <div className="BarChart w-1/2">
+      <div className="flex flex-col lg:flex-row gap-12 mt-12 rounded-lg bg-white overflow-x-auto">
+        <div className="BarChart lg:w-1/2">
           <BarChart
             width={500}
             height={300}
@@ -126,6 +126,7 @@ const pieChartData = chartData.map(data => {
               left: 20,
               bottom: 5,
             }}
+            
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="category" />
@@ -142,7 +143,7 @@ const pieChartData = chartData.map(data => {
             </Bar>
           </BarChart>
         </div>
-        <div className="PieChart w-1/2">
+        <div className="PieChart lg:w-1/2">
         <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={400}>
         <Legend></Legend>
