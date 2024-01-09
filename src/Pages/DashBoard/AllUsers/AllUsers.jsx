@@ -87,14 +87,14 @@ const AllUsers = () => {
   };
 
   return (
-    <div className="bg-gray-100 lg:px-[100px] lg:py-4 min-h-screen">
+    <div className="bg-gray-100 lg:px-[100px] lg:py-4 min-h-screen max-w-[100vw]">
       <Link to="/order/salad">
         <Title heading="MANAGE ALL USERS" subHeading="How many?"></Title>
       </Link>
-      <div className="bg-white rounded-lg p-12">
+      <div className="bg-white rounded-lg p-2 lg:p-12 overflow-x-auto">
         <div className="">
           <div>
-            <h1 className="text-2xl font-bold uppercase">
+            <h1 className="text-lg md:text-2xl font-bold uppercase">
               Total Users: {users.length}
             </h1>
           </div>

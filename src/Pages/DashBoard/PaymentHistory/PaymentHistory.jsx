@@ -21,8 +21,8 @@ const PaymentHistory = () => {
   });
   console.log(payments);
   return (
-    <div className="bg-gray-100 lg:px-[50px] lg:py-4 max-h-screen">
-      <div className="bg-white rounded-lg p-6">
+    <div className="bg-gray-100  px-2 lg:px-[50px] lg:py-4 max-h-screen max-w-[100vw] overflow-x-hidden">
+      <div className="bg-white rounded-lg p-6 mt-12">
         <div className="">
           <div>
             <h1 className="text-2xl font-bold uppercase">

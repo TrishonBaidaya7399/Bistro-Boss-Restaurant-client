@@ -50,19 +50,19 @@ const Cart = () => {
       });
   };
   return (
-    <div className="bg-gray-100 lg:px-[100px] lg:py-4 min-h-screen">
+    <div className="bg-gray-100 md:px-2 lg:px-[100px] lg:py-4 min-h-screen max-w-[100vw]">
       <Link to="/order/salad">
         <Title heading="WANNA ADD MORE?" subHeading="My Cart"></Title>
       </Link>
-      <div className="bg-white rounded-lg p-12">
-        <div className="flex justify-between items-center mb-4">
+      <div className="bg-white rounded-lg md:p-12 pt-6 overflow=x-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-4">
           <div>
-            <h1 className="text-2xl font-bold uppercase">
+            <h1 className="text-lg md:text-2xl font-bold uppercase">
               Total orders: {cart.length}
             </h1>
           </div>
           <div>
-            <h1 className="text-2xl font-bold uppercase">
+            <h1 className="text-lg md:text-2xl font-bold uppercase">
               Total Price: ${totalPrice}
             </h1>
           </div>

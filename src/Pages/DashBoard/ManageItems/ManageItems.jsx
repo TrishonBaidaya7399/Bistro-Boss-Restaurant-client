@@ -56,7 +56,7 @@ const ManageItems = () => {
             </h1>
           </div>
         </div>
-        <div className="overflow-y-auto lg:overflow-x-hidden  h-[60vh] shadow-lg border-[3px] border-[#D1A054] rounded-lg drop-shadow-xl">
+        <div className="overflow-y-auto lg:overflow-x-hidden  h-[90vh] shadow-lg border-[3px] border-[#D1A054] rounded-lg drop-shadow-xl">
           <table className="table">
             {/* head */}
             <thead className="bg-[#D1A054] text-white rounded-lg">

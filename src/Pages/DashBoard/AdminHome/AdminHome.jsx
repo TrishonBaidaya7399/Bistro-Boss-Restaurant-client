@@ -115,7 +115,7 @@ const pieChartData = chartData.map(data => {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row gap-12 mt-12 rounded-lg bg-white overflow-x-auto">
-        <div className="BarChart lg:w-1/2">
+        <div className="BarChart lg:w-1/2 mx-auto">
           <BarChart
             width={500}
             height={300}
@@ -143,7 +143,7 @@ const pieChartData = chartData.map(data => {
             </Bar>
           </BarChart>
         </div>
-        <div className="PieChart lg:w-1/2">
+        <div className="PieChart lg:w-1/2 h-[250px]">
         <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={400}>
         <Legend></Legend>
