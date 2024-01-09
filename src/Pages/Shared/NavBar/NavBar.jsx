@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { FiLogIn } from "react-icons/fi";
 // import cartImg from "../../../assets/icon/shopping-cart.png";
 import { Link, NavLink } from "react-router-dom";
 import { BsSunFill, BsFillMoonStarsFill } from "react-icons/bs";
@@ -221,9 +222,13 @@ const NavBar = () => {
         ) : (
           <>
             <Link to="/login" className="">
-              <button className="btn bg-gray-700 bg-opacity-80 hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-[#BB8506] hover:border-b-[#BB8506] text-[#BB8506] hover:text-[#BB8506] hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg font-semibold">
+              <button className="hidden md:block btn bg-gray-700 bg-opacity-80 hover:bg-[transparent] border-b-4 border-[transparent] hover:border-[transparent] border-b-[#BB8506] hover:border-b-[#BB8506] text-yellow-400 hover:bg-black hover:bg-opacity-70 hover:drop-shadow-xl py-2 px-4 rounded-lg font-semibold">
                 Login
               </button>
+              <button className="block md:hidden text-2xl text-yellow-400 pb-1 pr-2 font-semibold">
+              <FiLogIn />
+              </button>
+
             </Link>
           </>
         )}

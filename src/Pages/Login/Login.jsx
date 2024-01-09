@@ -91,12 +91,12 @@ const Login = () => {
 <Helmet>
     <title>{`BISTRO BOSS | Log In`}</title>
 </Helmet>
-<div className="hero min-h-screen p-[80px] " style={{backgroundImage: `url(${bgImg})`}}>
+<div className="hero min-h-screen lg:p-[80px] " style={{backgroundImage: `url(${bgImg})`}}>
   <div className="hero-content flex-col lg:flex-row w-full h-full border-[3px] border-gray-300 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
     <div className="text-center lg:text-left">
      <img src={authenticationImg} alt="" />
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm ">
+    <div className="card flex-shrink-0 w-full lg:max-w-sm ">
       <form onSubmit={handleLogin} className="card-body text-gray-700">
         <h1 className="text-gray-700 font-bold text-3xl mx-auto">LOGIN</h1>
         <div className="form-control">
